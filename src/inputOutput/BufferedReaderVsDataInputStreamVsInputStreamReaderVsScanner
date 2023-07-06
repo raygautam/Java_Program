@@ -1,0 +1,103 @@
+Let's compare `BufferedReader`, `DataInputStream`, `InputStreamReader`, and `Scanner` in Java and provide an example for each:
+
+1. **BufferedReader**:
+   - `BufferedReader` is used for efficient reading of text from an input stream.
+   - It reads text from a character input stream, such as `FileReader` or `InputStreamReader`.
+   - It provides buffering, which reduces the number of I/O operations and improves performance.
+   - It is commonly used for reading lines of text.
+
+Example:
+```java
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class BufferedReaderExample {
+    public static void main(String[] args) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("file.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+In this example, `BufferedReader` is used to read text from a file named "file.txt" line by line. Each line is then printed to the console.
+
+2. **DataInputStream**:
+   - `DataInputStream` is used for reading binary data from an input stream.
+   - It provides methods to read primitive data types from the input stream.
+   - It is commonly used when reading data that was previously written using `DataOutputStream`.
+
+Example:
+```java
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class DataInputStreamExample {
+    public static void main(String[] args) {
+        try (DataInputStream dis = new DataInputStream(new FileInputStream("data.bin"))) {
+            int value = dis.readInt();
+            System.out.println("Read value: " + value);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+In this example, `DataInputStream` is used to read an integer value from a binary file named "data.bin". The value is then printed to the console.
+
+3. **InputStreamReader**:
+   - `InputStreamReader` is used for reading character data from an input stream.
+   - It converts bytes from the underlying input stream into characters using a specified character encoding.
+   - It is commonly used when you need to specify a specific character encoding for reading text.
+
+Example:
+```java
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class InputStreamReaderExample {
+    public static void main(String[] args) {
+        try (InputStreamReader reader = new InputStreamReader(new FileInputStream("file.txt"), "UTF-8")) {
+            int c;
+            while ((c = reader.read()) != -1) {
+                System.out.print((char) c);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+In this example, `InputStreamReader` is used to read characters from a text file named "file.txt" using the UTF-8 character encoding. Each character is then printed to the console.
+
+4. **Scanner**:
+   - `Scanner` is used for parsing input into tokens and retrieving formatted input from various sources.
+   - It provides methods for reading different types of data, such as integers, doubles, and strings.
+   - It is commonly used for interactive input parsing and scanning.
+
+Example:
+```java
+import java.util.Scanner;
+
+public class ScannerExample {
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Enter your name: ");
+            String name = scanner.nextLine();
+            System.out.println("Hello, " + name + "!");
+        }
+    }
+}
+```
+In this example, `Scanner` is used to read a line of text
+
+ from the standard input (console). The entered name is then used to display a personalized greeting.
+
+These examples demonstrate the use of different input reading classes in Java. The choice of which class to use depends on the specific requirements of your program, such as whether you are dealing with text or binary data, the need for buffering, or the desired parsing capabilities.

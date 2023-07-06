@@ -1,0 +1,13 @@
+
+Common Exception occurs during File Handling:
+
+Some common exceptions related to the method of File objects and their operation which we need to take care of when to deal with files. You can get these exceptions while opening File in Java While Creating Files in Java or during reading and writing from File or Directory in Java.
+
+The whole File System is protected by SecurityManager in Java and Applets or other Java program from untrusted sources is not allowed to access the File System from Java to protect the User from any Internet threat.
+
+·          IOException: if anyI/O error occurred we got this Exception
+·          SecurityException: this exception we get when security Manager exist its checkWrite or checkRead method denies to access the file
+·          IllegalArgumentException:if method argument we are passing is invalid then we get this exception
+·          MalFormedUrlException: this kind of exception is generated if the path cannot be parsed a URL
+
+Read more: https://javarevisited.blogspot.com/2011/12/create-file-directory-java-example.html#ixzz86i9J6wH4

@@ -1,0 +1,107 @@
+1. Which class is used to create a directory in Java? (answer)
+This is tricky because there is no Directory class, File class is used to create both file and directory in Java. You can see the linked answer for more details.
+
+2. How do you create a file and directory in Java? (answer)
+Ans -> java.io.File provides methods like createNewFile() and mkdir() to create new file and directory in Java. These methods returns boolean, which is the result of that operation i.e. createNewFile() returns true if it successfully created file and mkdir() returns true if the directory is created successfully.
+
+       There is another method called mkdirs(), which you can use if parent directory doesn't exist, it's like mkdir -p option from UNIX mkdir command. In this Java program, we will learn how to create file and directory, only if they don't exist already.
+
+       Read more: https://www.java67.com/2014/02/how-to-create-file-and-directory-in-java.html#ixzz86iEWHYjE
+
+3. What is the difference between InputStream and OutputStream in Java? (answer)
+InputStream is used to read data from sources like File, Socket, or Console, while OutputStream is used to write data into a destination like a File, Socket, or Console.
+
+4. Can you create a symbolic link from Java Program on supported platforms like UNIX? (answer)
+
+5. What is the difference between FileInputStream and FileReader in Java IO? (answer)
+
+6. What is the difference between BufferedReader and FileReader in Java? (answer)
+BufferedReader is a Decorator that provides buffering for faster IO, while FileReader is used to read data from File.
+
+7. What is the difference between BufferedReader and Scanner in Java? (answer)
+
+8. What is the difference between Scanner and FileReader in Java? (answer)
+
+9. What is the use of the PrintStream class in Java IO? (answer)
+PrintStream is used to write data on Console, for example, System.out.println(), here out is an object of PrintStream class and we are calling println() method from that class.
+
+40+ Java IO and Files Interview Questions with Answers
+
+
+10. What is the right way to close the streams in Java? (answer)
+Double-check if you have forgotten to handle the exception while closing the stream. See the linked answer for a detailed explanation.
+
+11. Why you need to close the streams in finally block? (answer)
+This is related to the previous question and we do this because finally block is always executed irrespective of exception in a try block or not.
+
+12. Why do you need a separate try-catch block inside finally to close the input and output streams? (answer)
+
+13. What is the file descriptor? (answer)
+
+14. Can we monitor a directory for adding new files in Java? (answer)
+
+15. How do you process a large file in Java? (answer)
+
+16. What is the try-with-resource statement in Java? (answer)
+
+17. How do you convert a file into String in Java? (answer)
+
+18. How do you copy a file in Java? (answer)
+
+19. How do you check the permission of a file or directory in Java? (answer)
+
+20. How do you change the permission of a file in Java? (answer)
+
+
+21. Can you open a ZIP file in Java? How? (answer)
+
+22. What is the difference between ZipFile and ZipInputStream? (answer)
+
+23. When does java.io.FileNotFoundException: (Access is denied) comes? How do you fix that? (answer)
+
+24. How do you append text into an existing file in Java? (answer)
+
+25. How do you get the default character encoding in Java? (answer)
+
+26. Can you delete a directory with files in Java? How? (answer)
+
+27. What is a memory-mapped file in Java? (answer)
+
+
+Java IO Interview questions with answers
+
+
+28. How do you read a file line by line in Java? (answer)
+
+29. How do you check if a file is hidden in Java? (answer)
+
+30. What is difference between getPath(), getCanonicalPath() and getAbsolutePath() in Java? (answer)
+
+31. How do you convert an InputStream into String in Java? (answer)
+
+32. Can we load a resource from ClassPath in Java? (answer)
+
+33. How do you read an XML file in Java as String? (answer)
+
+34. Can we read the Microsoft Excel (XLS and XLSX) file in Java? How? (answer)
+
+35. How do you load a CSV file in Java? (answer)
+
+36. How do you read the Properties file in Java? (answer)
+
+37. How do you serialize an Object in Java? (answer)
+hint:  by using ObjectInputStream and ObjectOutputStream classes
+
+38. What is the difference between FileInputStream and ObjectInputStream in Java? (answer)
+
+39. How do you read/write a text file in Java?  (answer)
+
+40. How do you upload a file into a Web Server in Java? (answer)
+
+41. How do you read a file line by line in Java 8? (answer)
+
+42. What is RandomAccessFile? What is the benefit of using RandomAccessFile? (answer)
+
+43. How do you convert an InputStream to Byte Array in Java? (answer)
+
+Read more: https://www.java67.com/2020/02/40-java-io-and-files-interview-questions-answers.html#ixzz86iAZbNrz

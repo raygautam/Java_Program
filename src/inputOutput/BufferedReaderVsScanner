@@ -1,0 +1,7 @@
+Following are the Major Differences between Scanner and BufferedReader Class in Java
+
+-> BufferedReader is synchronous while Scanner is not.
+    BufferedReader should be used if we are working with multiple threads.
+-> BufferedReader has a significantly larger buffer memory than Scanner.
+-> The Scanner has a little buffer (1KB char buffer) as opposed to the BufferedReader (8KB byte buffer), but it’s more than enough.
+-> BufferedReader is a bit faster as compared to Scanner because the Scanner does the parsing of input data and BufferedReader simply reads a sequence of characters.
