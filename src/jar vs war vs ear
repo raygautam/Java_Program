@@ -1,0 +1,4 @@
+AR files are used for packaging Java libraries and standalone applications,
+WAR files are used for web applications, and
+EAR files are used for enterprise-level Java applications that consist of multiple modules.
+Each format is designed for specific use cases, helping developers manage and distribute Java applications efficiently.
